@@ -1,6 +1,6 @@
 # Welcome to AS_APP
 AS_APP is a website created with php, html, css, js and other languages representing a simple social network web application, where users can post a simple text with a title and a color where you can write whatever you want!
-![UML](#UML)
+![UML](#uml)
 
 ## Design 
 ### Login Page
