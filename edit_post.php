@@ -13,7 +13,6 @@ if ($conn->connect_error) {
 $user_id = $_SESSION['user_id'];
 $post_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
-// Recupera il post solo se appartiene all'utente
 $stmt = $conn->prepare("SELECT title, content, color FROM posts WHERE id = ? AND user_id = ?");
 $stmt->bind_param("ii", $post_id, $user_id);
 $stmt->execute();

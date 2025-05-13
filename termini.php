@@ -5,12 +5,10 @@
   <title>Termini e Condizioni - A-S APP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Font e icone -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <?php include "navbar.php"; ?>
 
-  <!-- Stile base + personalizzato -->
   <style>
     body {
       margin: 0;

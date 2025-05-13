@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Connessione al database
 $conn = new mysqli("localhost", "root", "", "as_app");
 if ($conn->connect_error) {
     die("Connessione fallita: " . $conn->connect_error);

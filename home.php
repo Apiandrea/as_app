@@ -23,7 +23,6 @@ $_SESSION['is_admin'] = $is_admin;
 if (isset($_POST['delete_post_id']) && ($_SESSION['is_admin'] || isset($_SESSION['username']))) {
     $delete_id = intval($_POST['delete_post_id']);
 
-    // Controlla che l'utente sia admin o autore del post
     $stmt = $conn->prepare("SELECT user_id FROM posts WHERE id = ?");
     $stmt->bind_param("i", $delete_id);
     $stmt->execute();
@@ -174,7 +173,6 @@ $totalPages = ceil($totalPosts / $postsPerPage);
 <div class="container mt-5">
     <h2 class="text-center">Benvenuto, <?php echo htmlspecialchars($_SESSION['username']); ?></h2>
     <div class="row">
-        <!-- Crea Post -->
         <div class="col-md-6 mb-4">
             <div class="card">
                 <div class="card-header text-center">
@@ -203,7 +201,6 @@ $totalPages = ceil($totalPosts / $postsPerPage);
             </div>
         </div>
 
-        <!-- Post Recenti -->
         <div class="col-md-6 mb-4">
             <div class="card">
                 <div class="card-header text-center">
@@ -232,7 +229,6 @@ $totalPages = ceil($totalPosts / $postsPerPage);
                         </div>
                     <?php endwhile; ?>
 
-                    <!-- Paginazione -->
                     <div class="d-flex justify-content-between align-items-center mt-3">
                         <?php if ($page > 1): ?>
                             <a href="?page=<?php echo $page - 1; ?>" class="btn btn-secondary">⬅️</a>

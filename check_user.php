@@ -15,8 +15,8 @@ if ($conn->connect_error) {
 $response = ["status" => "error", "message" => "Richiesta non valida."];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $field = $_POST['field']; // 'username' oppure 'email'
-    $value = $_POST['value']; // valore da controllare
+    $field = $_POST['field']; 
+    $value = $_POST['value']; 
 
     if (in_array($field, ['username', 'email'])) {
         $stmt = $conn->prepare("SELECT id FROM users WHERE $field = ?");
